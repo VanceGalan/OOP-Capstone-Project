@@ -1,0 +1,16 @@
+# Java
+*.class
+# Keep FlatLaf jar in lib/
+!lib/*.jar
+*.war
+*.ear
+out/
+target/
+bin/
+.idea/
+*.iml
+*.iws
+*.ipr
+.DS_Store
+# Data (keep structure, ignore local test data if needed)
+# data/*.txt
