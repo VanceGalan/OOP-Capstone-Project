@@ -2,22 +2,6 @@
 
 ```mermaid
 classDiagram
-    class Authenticatable {
-        <<interface>>
-        +boolean login() boolean
-        +void logout() void
-    }
-    class Payable {
-        <<interface>>
-        +boolean processPay() boolean
-        +boolean refundPay() boolean
-    }
-    class Manageable {
-        <<interface>>
-        +void create() void
-        +void update() void
-        +void delete() void
-    }
     class User {
         <<abstract>>
         -String userId
@@ -119,6 +103,22 @@ classDiagram
         +String generateQRCode() String
         +boolean validateTicket() boolean
         +void saveTicketToFile() void
+    }
+    class Authenticatable {
+        <<interface>>
+        +boolean login() boolean
+        +void logout() void
+    }
+    class Payable {
+        <<interface>>
+        +boolean processPay() boolean
+        +boolean refundPay() boolean
+    }
+    class Manageable {
+        <<interface>>
+        +void create() void
+        +void update() void
+        +void delete() void
     }
     Authenticatable <|.. User : implements
     Payable <|.. Payment : implements
