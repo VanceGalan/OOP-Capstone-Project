@@ -5,7 +5,6 @@ public class Customer extends User {
         super(userId, firstName, lastName, email, passwordHash, status);
     }
 
-    #
 
     @Override
     public void showRoleMenu() {
