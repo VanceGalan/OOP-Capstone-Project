@@ -1,4 +1,6 @@
 import com.formdev.flatlaf.FlatLightLaf;
+import model.Admin;
+import ui.admin.AdminDashboard;
 import ui.auth.Login;
 
 import javax.swing.*;
@@ -8,7 +10,8 @@ public class Main {
         FlatLightLaf.setup();
 
         SwingUtilities.invokeLater(() -> {
-            Login login = new Login();
+            //Login login = new Login();
+            AdminDashboard login = new AdminDashboard();
 
             JFrame frame = new JFrame("Movie Ticket Booking System - Login");
             frame.setContentPane(login.getMainPanel());
