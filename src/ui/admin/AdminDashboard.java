@@ -1,36 +1,35 @@
 package ui.admin;
 
 import javax.swing.*;
-import java.awt.*;
-
-import static util.Theme.CARD;
-import static util.Theme.PRIMARY;
 
 public class AdminDashboard {
+    private JPanel mainPanel;
+    private JPanel bannerPanel;
+    private JLabel greetingLabel;
+    private JLabel subtitleLabel;
+    private JPanel pillPanel;
+    private JLabel pendingPill;
+    private JLabel refundPill;
+    private JPanel cardsPanel;
+    private JPanel card1Panel;
+    private JLabel card1IconLabel;
+    private JLabel card1TitleLabel;
+    private JLabel card1SubtitleLabel;
+    private JButton card1OpenButton;
+    private JPanel card2Panel;
+    private JLabel card2IconLabel;
+    private JLabel card2TitleLabel;
+    private JLabel card2SubtitleLabel;
+    private JButton card2OpenButton;
+    private JPanel card3Panel;
+    private JLabel card3IconLabel;
+    private JLabel card3TitleLabel;
+    private JLabel card3SubtitleLabel;
+    private JButton card3OpenButton;
     private JButton logoutButton;
-    private JPanel cardBanner;
-    private JPanel cardApproveScreenings;
-    private JPanel cardProcessRefunds;
-    private JPanel cardManageUsers;
-    private JPanel pnlMain;
 
-    public AdminDashboard() {
-
-        cardBanner.setBackground(PRIMARY);
-        cardBanner.setBorder(BorderFactory.createLineBorder(new Color(0xE2, 0xE8, 0xF0), 1));
-
-        cardApproveScreenings.setBackground(CARD);
-        cardApproveScreenings.setBorder(BorderFactory.createLineBorder(new Color(0xE2, 0xE8, 0xF0), 1));
-
-        cardProcessRefunds.setBackground(CARD);
-        cardProcessRefunds.setBorder(BorderFactory.createLineBorder(new Color(0xE2, 0xE8, 0xF0), 1));
-
-        cardManageUsers.setBackground(CARD);
-        cardManageUsers.setBorder(BorderFactory.createLineBorder(new Color(0xE2, 0xE8, 0xF0), 1));
-
-    }
 
     public JPanel getMainPanel() {
-        return pnlMain;
+        return mainPanel;
     }
 }
