@@ -1,3 +1,4 @@
+import ui.admin.ApproveScreening;
 import ui.admin.EditUserDialog;
 import ui.admin.Refund;
 import util.Theme;
@@ -9,7 +10,7 @@ public class Main {
         Theme.applyTheme();
 
         SwingUtilities.invokeLater(() -> {
-            EditUserDialog login = new EditUserDialog();
+            ApproveScreening login = new ApproveScreening();
 
             JFrame frame = new JFrame("Movie Ticket Booking System - Login");
             frame.setContentPane(login.getMainPanel());

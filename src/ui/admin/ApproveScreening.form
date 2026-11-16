@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="ui.admin.ApproveScreening">
-  <grid id="27dc6" binding="mainPanel" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="0" vgap="12">
+  <grid id="27dc6" binding="mainPanel" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="12" vgap="12">
     <margin top="16" left="16" bottom="16" right="16"/>
     <constraints>
-      <xy x="20" y="20" width="500" height="400"/>
+      <xy x="20" y="20" width="744" height="524"/>
     </constraints>
     <properties>
       <background color="-591877"/>
@@ -13,7 +13,7 @@
     <children>
       <scrollpane id="7716e" binding="cardsScrollPane">
         <constraints>
-          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false">
+          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="2" hsize-policy="2" anchor="0" fill="3" indent="0" use-parent-layout="false">
             <preferred-size width="708" height="488"/>
           </grid>
         </constraints>
@@ -22,14 +22,258 @@
         </properties>
         <border type="none"/>
         <children>
-          <grid id="3950e" binding="cardsPanel" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="0" vgap="12">
+          <grid id="3950e" binding="cardsPanel" layout-manager="GridLayoutManager" row-count="3" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="0" vgap="12">
             <margin top="0" left="0" bottom="0" right="0"/>
             <constraints/>
             <properties>
               <background color="-591877"/>
             </properties>
             <border type="none"/>
-            <children/>
+            <children>
+              <grid id="38e5c" binding="card1Panel" layout-manager="GridLayoutManager" row-count="1" column-count="3" same-size-horizontally="false" same-size-vertically="false" hgap="12" vgap="0">
+                <margin top="12" left="12" bottom="12" right="12"/>
+                <constraints>
+                  <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="1" fill="0" indent="0" use-parent-layout="false">
+                    <preferred-size width="680" height="110"/>
+                  </grid>
+                </constraints>
+                <properties>
+                  <background color="-1"/>
+                </properties>
+                <border type="none"/>
+                <children>
+                  <component id="eaa" class="javax.swing.JLabel" binding="avatar1Label">
+                    <constraints>
+                      <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false">
+                        <preferred-size width="56" height="56"/>
+                      </grid>
+                    </constraints>
+                    <properties>
+                      <background color="-1419252"/>
+                      <font name="Segoe UI" size="18" style="1"/>
+                      <foreground color="-1"/>
+                      <horizontalAlignment value="0"/>
+                      <opaque value="true"/>
+                      <text value="L"/>
+                    </properties>
+                  </component>
+                  <grid id="6c29" binding="info1Panel" layout-manager="GridLayoutManager" row-count="3" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="0" vgap="4">
+                    <margin top="0" left="0" bottom="0" right="0"/>
+                    <constraints>
+                      <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                    <properties>
+                      <background color="-1"/>
+                    </properties>
+                    <border type="none"/>
+                    <children>
+                      <component id="f12ba" class="javax.swing.JLabel" binding="title1Label">
+                        <constraints>
+                          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                        </constraints>
+                        <properties>
+                          <font name="Segoe UI" size="16" style="1"/>
+                          <foreground color="-15656921"/>
+                          <text value="River Festival"/>
+                        </properties>
+                      </component>
+                      <component id="d85ce" class="javax.swing.JLabel" binding="subtitle1Label">
+                        <constraints>
+                          <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                        </constraints>
+                        <properties>
+                          <font name="Segoe UI" size="13" style="0"/>
+                          <foreground color="-9735552"/>
+                          <text value="Lance • Organizer • Drama • 110 min"/>
+                        </properties>
+                      </component>
+                      <component id="3afe" class="javax.swing.JLabel" binding="hall1Label">
+                        <constraints>
+                          <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                        </constraints>
+                        <properties>
+                          <background color="-1117441"/>
+                          <font name="Segoe UI" size="12" style="1"/>
+                          <foreground color="-11581723"/>
+                          <opaque value="true"/>
+                          <text value="Hall 2 • Sat, Nov 14, 2026 • 7:00 PM"/>
+                        </properties>
+                      </component>
+                    </children>
+                  </grid>
+                  <grid id="288ab" binding="buttons1Panel" layout-manager="GridLayoutManager" row-count="2" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="0" vgap="8">
+                    <margin top="0" left="0" bottom="0" right="0"/>
+                    <constraints>
+                      <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                    <properties>
+                      <background color="-1"/>
+                    </properties>
+                    <border type="none"/>
+                    <children>
+                      <component id="f74d8" class="javax.swing.JButton" binding="approve1Btn">
+                        <constraints>
+                          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="0" fill="1" indent="0" use-parent-layout="false">
+                            <preferred-size width="90" height="32"/>
+                          </grid>
+                        </constraints>
+                        <properties>
+                          <background color="-15293622"/>
+                          <borderPainted value="true"/>
+                          <contentAreaFilled value="true"/>
+                          <focusPainted value="true"/>
+                          <font name="Segoe UI" size="13" style="1"/>
+                          <foreground color="-1"/>
+                          <opaque value="true"/>
+                          <text value="Approve"/>
+                        </properties>
+                      </component>
+                      <component id="8f314" class="javax.swing.JButton" binding="reject1Btn">
+                        <constraints>
+                          <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="0" fill="1" indent="0" use-parent-layout="false">
+                            <preferred-size width="90" height="32"/>
+                          </grid>
+                        </constraints>
+                        <properties>
+                          <background color="-1"/>
+                          <borderPainted value="true"/>
+                          <contentAreaFilled value="true"/>
+                          <focusPainted value="true"/>
+                          <font name="Segoe UI" size="13" style="1"/>
+                          <foreground color="-2349530"/>
+                          <opaque value="true"/>
+                          <text value="Reject"/>
+                        </properties>
+                      </component>
+                    </children>
+                  </grid>
+                </children>
+              </grid>
+              <grid id="e875b" binding="card2Panel" layout-manager="GridLayoutManager" row-count="1" column-count="3" same-size-horizontally="false" same-size-vertically="false" hgap="12" vgap="0">
+                <margin top="12" left="12" bottom="12" right="12"/>
+                <constraints>
+                  <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="1" fill="0" indent="0" use-parent-layout="false">
+                    <preferred-size width="680" height="110"/>
+                  </grid>
+                </constraints>
+                <properties>
+                  <background color="-1"/>
+                </properties>
+                <border type="none"/>
+                <children>
+                  <component id="5c959" class="javax.swing.JLabel" binding="avatar2Label">
+                    <constraints>
+                      <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false">
+                        <preferred-size width="56" height="56"/>
+                      </grid>
+                    </constraints>
+                    <properties>
+                      <background color="-1419252"/>
+                      <font name="Segoe UI" size="18" style="1"/>
+                      <foreground color="-1"/>
+                      <horizontalAlignment value="0"/>
+                      <opaque value="true"/>
+                      <text value="0"/>
+                    </properties>
+                  </component>
+                  <grid id="b46d1" binding="info2Panel" layout-manager="GridLayoutManager" row-count="3" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="0" vgap="4">
+                    <margin top="0" left="0" bottom="0" right="0"/>
+                    <constraints>
+                      <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                    <properties>
+                      <background color="-1"/>
+                    </properties>
+                    <border type="none"/>
+                    <children>
+                      <component id="15df4" class="javax.swing.JLabel" binding="title2Label">
+                        <constraints>
+                          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                        </constraints>
+                        <properties>
+                          <font name="Segoe UI" size="16" style="1"/>
+                          <foreground color="-15656921"/>
+                          <text value="Old Manila"/>
+                        </properties>
+                      </component>
+                      <component id="cc3d7" class="javax.swing.JLabel" binding="subtitle2Label">
+                        <constraints>
+                          <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                        </constraints>
+                        <properties>
+                          <font name="Segoe UI" size="13" style="0"/>
+                          <foreground color="-9735552"/>
+                          <text value="Lance • Organizer • Drama • 124 min"/>
+                        </properties>
+                      </component>
+                      <component id="332f4" class="javax.swing.JLabel" binding="hall2Label">
+                        <constraints>
+                          <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                        </constraints>
+                        <properties>
+                          <background color="-1117441"/>
+                          <font name="Segoe UI" size="12" style="1"/>
+                          <foreground color="-11581723"/>
+                          <opaque value="true"/>
+                          <text value="Hall 3 • Sat, Nov 14, 2026 • 7:00 PM"/>
+                        </properties>
+                      </component>
+                    </children>
+                  </grid>
+                  <grid id="1b418" binding="buttons2Panel" layout-manager="GridLayoutManager" row-count="2" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="0" vgap="8">
+                    <margin top="0" left="0" bottom="0" right="0"/>
+                    <constraints>
+                      <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                    <properties>
+                      <background color="-1"/>
+                    </properties>
+                    <border type="none"/>
+                    <children>
+                      <component id="a43fa" class="javax.swing.JButton" binding="approve2Btn">
+                        <constraints>
+                          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="0" fill="1" indent="0" use-parent-layout="false">
+                            <preferred-size width="90" height="32"/>
+                          </grid>
+                        </constraints>
+                        <properties>
+                          <background color="-15293622"/>
+                          <borderPainted value="true"/>
+                          <contentAreaFilled value="true"/>
+                          <focusPainted value="true"/>
+                          <font name="Segoe UI" size="13" style="1"/>
+                          <foreground color="-1"/>
+                          <opaque value="true"/>
+                          <text value="Approve"/>
+                        </properties>
+                      </component>
+                      <component id="20db5" class="javax.swing.JButton" binding="reject2Btn">
+                        <constraints>
+                          <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="0" fill="1" indent="0" use-parent-layout="false">
+                            <preferred-size width="90" height="32"/>
+                          </grid>
+                        </constraints>
+                        <properties>
+                          <background color="-1"/>
+                          <borderPainted value="true"/>
+                          <contentAreaFilled value="true"/>
+                          <focusPainted value="true"/>
+                          <font name="Segoe UI" size="13" style="1"/>
+                          <foreground color="-2349530"/>
+                          <opaque value="true"/>
+                          <text value="Reject"/>
+                        </properties>
+                      </component>
+                    </children>
+                  </grid>
+                </children>
+              </grid>
+              <vspacer id="817f1">
+                <constraints>
+                  <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+                </constraints>
+              </vspacer>
+            </children>
           </grid>
         </children>
       </scrollpane>
