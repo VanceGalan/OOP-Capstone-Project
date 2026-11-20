@@ -9,16 +9,25 @@ public class Screening implements Manageable{
     private double price; // ONE price per screening — NO VIP
     private String status; // Pending / Approved / Rejected
 
+
     public Screening(String screeningId, String movieId, LocalDateTime showDateTime, double price, String status) {
+        this(screeningId, movieId, showDateTime, null, price, status);
+    }
+    public Screening(String screeningId, String movieId, LocalDateTime showDateTime,String cinemaHall, double price, String status) {
         this.screeningId = screeningId;
         this.movieId = movieId;
         this.showDateTime = showDateTime;
+        this.cinemaHall = cinemaHall;
         this.price = price;
         this.status = status;
     }
     public String getFormattedDateTime() {
         return showDateTime.format(DateTimeFormatter.ofPattern("EEE, MMM d, yyyy • h:mm a"));
     }
+
+    public LocalDateTime getShowDateTime() { return showDateTime; }
+
+    public void setShowDateTime(LocalDateTime showDateTime) {this.showDateTime = showDateTime; }
 
     public String getScreeningId() {
         return screeningId;
