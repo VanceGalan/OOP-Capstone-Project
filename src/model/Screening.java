@@ -8,20 +8,33 @@ public class Screening implements Manageable{
     private String cinemaHall;
     private double price; // ONE price per screening — NO VIP
     private String status; // Pending / Approved / Rejected
+    private String organizerId;
+    private String rejectionReason;
 
 
     public Screening(String screeningId, String movieId, LocalDateTime showDateTime, double price, String status) {
-        this(screeningId, movieId, showDateTime, null, price, status);
+        this(screeningId, movieId, showDateTime, null, price, status, null, null);
     }
     public Screening(String screeningId, String movieId, LocalDateTime showDateTime,String cinemaHall, double price, String status) {
+        this(screeningId, movieId, showDateTime, cinemaHall, price, status, null, null);
+    }
+    public Screening(String screeningId, String movieId, LocalDateTime showDateTime, String cinemaHall, double price, String status, String organizerId) {
+        this(screeningId, movieId, showDateTime, cinemaHall, price, status, organizerId, null);
+    }
+    public Screening(String screeningId, String movieId, LocalDateTime showDateTime, String cinemaHall, double price, String status, String organizerId, String rejectionReason) {
         this.screeningId = screeningId;
         this.movieId = movieId;
         this.showDateTime = showDateTime;
         this.cinemaHall = cinemaHall;
         this.price = price;
         this.status = status;
+        this.organizerId = organizerId;
+        this.rejectionReason = rejectionReason;
     }
     public String getFormattedDateTime() {
+        if (showDateTime == null) {
+            return "";
+        }
         return showDateTime.format(DateTimeFormatter.ofPattern("EEE, MMM d, yyyy • h:mm a"));
     }
 
@@ -67,6 +80,22 @@ public class Screening implements Manageable{
 
     public void setStatus(String status) {
         this.status = status;
+    }
+
+    public String getOrganizerId() {
+        return organizerId;
+    }
+
+    public void setOrganizerId(String organizerId) {
+        this.organizerId = organizerId;
+    }
+
+    public String getRejectionReason() {
+        return rejectionReason;
+    }
+
+    public void setRejectionReason(String rejectionReason) {
+        this.rejectionReason = rejectionReason;
     }
 
     @Override
