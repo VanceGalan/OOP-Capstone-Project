@@ -58,11 +58,12 @@ public abstract class User implements Authenticatable {
     }
 
     //----------------------------Methods
-
+    @Override
     public boolean login() {
         return true; // not final
     }
 
+    @Override
     public void logout() {
 
     }
