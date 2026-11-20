@@ -76,7 +76,6 @@ public class Login {
             frame.revalidate();
             frame.repaint();
         });
-
     }
 
     public JPanel getMainPanel() {
