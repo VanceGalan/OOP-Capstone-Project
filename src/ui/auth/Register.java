@@ -10,6 +10,7 @@ import java.time.Period;
 import java.time.YearMonth;
 import java.time.format.TextStyle;
 import java.util.Locale;
+import service.AuthService;
 
 public class Register {
     private JPanel mainPanel;
@@ -178,14 +179,15 @@ public class Register {
             return;
         }
 
-        errorLabel.setText(" ");
-        int age = Period.between(birthdate, LocalDate.now()).getYears();
-        // TODO: Connect AuthService.register(firstName, lastName, email, password, birthdate)
-        JOptionPane.showMessageDialog(
-                mainPanel,
-                "Account created for " + firstName + " " + lastName + " (Age: " + age + ").\nYou can now log in."
-        );
-        navigateToLogin();
+        try {
+            AuthService.register(firstName, lastName, email, password, birthdate);
+            errorLabel.setText(" ");
+            JOptionPane.showMessageDialog(mainPanel,"Account created for " + firstName + " " + lastName + "!\nYou can now log in.");
+            navigateToLogin();
+        } catch (IllegalArgumentException e) {
+            errorLabel.setText(e.getMessage());
+        }
+
     }
 
     private void navigateToLogin() {

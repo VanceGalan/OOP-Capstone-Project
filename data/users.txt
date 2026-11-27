@@ -1,0 +1,3 @@
+U-001|Admin|Jup|Admin|admin@cinema.com|ac9689e2272427085e35b9d3e3e8bed88cb3434828b43b86fc0596cad4c6e270|1999-01-18|Active
+U-002|EventOrganizer|Lance|Organizer|organizer@cinema.com|55a58b650284debf06c7729a3115817306a5caf5ba50d7e11af24e7b71fcb4c8|1998-06-22|Active
+U-003|Customer|Lance|Home|ldhomecillo@gmail.com|fc076509108d878a45ee3f3d2863a8e4f0a771b378f290993f7cc808ed657a57|2021-04-04|Active

@@ -3,6 +3,11 @@ package ui.auth;
 import util.Theme;
 import javax.swing.*;
 import java.awt.*;
+import service.AuthService;
+import model.Admin;
+import model.Customer;
+import model.EventOrganizer;
+import model.User;
 
 public class Login {
     private JPanel mainPanel;
@@ -56,13 +61,30 @@ public class Login {
             String email = emailField.getText().trim();
             String password = new String(passwordField.getPassword());
 
-            if (email.isEmpty() || password.isEmpty()){
-                errorLabel.setText("Please enter both email and password");
-            } else {
+            if (email.isEmpty() || password.isEmpty()) {
+                errorLabel.setText("Please enter both email and password.");
+                return;
+            }
+
+            try {
+                User user = AuthService.login(email, password);
                 errorLabel.setText(" ");
-                JOptionPane.showMessageDialog(mainPanel, "You are now logged in.");
+
+                if (user instanceof Admin) {
+                    // TODO: Navigate to AdminDashboard once merged
+                    JOptionPane.showMessageDialog(mainPanel, "Welcome, " + user.getFullName() + " (Admin)!");
+                } else if (user instanceof EventOrganizer) {
+                    // TODO: Navigate to OrganizerDashboard once merged
+                    JOptionPane.showMessageDialog(mainPanel, "Welcome, " + user.getFullName() + " (Organizer)!");
+                } else if (user instanceof Customer) {
+                    // TODO: Navigate to CustomerDashboard once merged
+                    JOptionPane.showMessageDialog(mainPanel, "Welcome, " + user.getFullName() + " (Customer, Age " + user.getAge() + ")!");
+                }
+            } catch (IllegalArgumentException ex) {
+                errorLabel.setText(ex.getMessage());
             }
         });
+
 
         signupBtn.addActionListener(e -> {
             JFrame frame = (JFrame) SwingUtilities.getWindowAncestor(mainPanel);

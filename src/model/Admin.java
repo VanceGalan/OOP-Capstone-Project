@@ -1,8 +1,14 @@
 package model;
 
+import java.time.LocalDate;
+
 public class Admin extends User {
     public Admin(String userId, String firstName, String lastName, String email, String passwordHash, String status) {
         super(userId, firstName, lastName, email, passwordHash, status);
+    }
+
+    public Admin(String userId, String firstName, String lastName, String email, String passwordHash, LocalDate birthdate, String status) {
+        super(userId, firstName, lastName, email, passwordHash, birthdate, status);
     }
 
     @Override
