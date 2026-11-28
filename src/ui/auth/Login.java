@@ -4,9 +4,7 @@ import util.Theme;
 import javax.swing.*;
 import java.awt.*;
 import service.AuthService;
-import model.Admin;
-import model.Customer;
-import model.EventOrganizer;
+import ui.DashboardFactory;
 import model.User;
 
 public class Login {
@@ -70,15 +68,14 @@ public class Login {
                 User user = AuthService.login(email, password);
                 errorLabel.setText(" ");
 
-                if (user instanceof Admin) {
-                    // TODO: Navigate to AdminDashboard once merged
-                    JOptionPane.showMessageDialog(mainPanel, "Welcome, " + user.getFullName() + " (Admin)!");
-                } else if (user instanceof EventOrganizer) {
-                    // TODO: Navigate to OrganizerDashboard once merged
-                    JOptionPane.showMessageDialog(mainPanel, "Welcome, " + user.getFullName() + " (Organizer)!");
-                } else if (user instanceof Customer) {
-                    // TODO: Navigate to CustomerDashboard once merged
-                    JOptionPane.showMessageDialog(mainPanel, "Welcome, " + user.getFullName() + " (Customer, Age " + user.getAge() + ")!");
+                JFrame frame = (JFrame) SwingUtilities.getWindowAncestor(mainPanel);
+                if (frame != null) {
+                    frame.setTitle(DashboardFactory.getDashboardTitle(user));
+                    frame.setContentPane(DashboardFactory.createDashboard(user));
+                    frame.pack();
+                    frame.setLocationRelativeTo(null);
+                    frame.revalidate();
+                    frame.repaint();
                 }
             } catch (IllegalArgumentException ex) {
                 errorLabel.setText(ex.getMessage());
